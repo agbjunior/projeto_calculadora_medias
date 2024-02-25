@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        padding: 50px;
+    }
+
+    .put, div{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .push{
+        margin-left: 600px;
+    }
+
+    body{
+        background-color: lightblue;
+    }
+
+    
+</style>
+<body>
+    <h1>Tarefa Formulário</h1>
+    <p class="put">Campo A <input class="put" type="number" name="txtn1" id="txtn1"> </p>
+    <p class="put">Campo B <input class="put" type="number" name="txtn2" id="txtn2"></p>
+    <input class="push" type="button" value="submeter" onclick="verificar()">
+    <p>
+        <div id="res">Resultado</div>
+    </p>
+        <script>
+            function verificar(){
+    var tn1 = document.getElementById('txtn1')
+    var tn2 = document.getElementById('txtn2')
+    var res = document.getElementById('res')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+
+        if(n2 < n1){
+            res.innerHTML=`Infelizmente, seu formulário não foi validado.`
+
+            res.style.color='red'
+            res.style.fontSize='1.5em'
+            
+        }else{
+            res.innerHTML=`Parabéns! Seu formulário foi validado.`
+
+            res.style.color='green'
+            res.style.fontSize='1.5em'
+        }
+    
+    
+}
+        </script>
+</body>
+</html>
